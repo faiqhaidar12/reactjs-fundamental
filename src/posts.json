@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Belajar React Js",
+    "tags": ["react", "frontend"],
+    "date": "2023-01-01"
+  },
+  {
+    "title": "Belajar Next Js",
+    "tags": ["nextjs", "frontend"],
+    "date": "2023-01-02"
+  },
+  {
+    "title": "Belajar Node Js",
+    "tags": ["node", "backend"],
+    "date": "2023-01-03"
+  },
+  {
+    "title": "Cara menggunakan Css",
+    "tags": ["css", "design"],
+    "date": "2023-01-03"
+  }
+]
