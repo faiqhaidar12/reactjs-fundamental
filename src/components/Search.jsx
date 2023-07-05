@@ -2,15 +2,26 @@ import { useState } from "react";
 
 function Search(props) {
   const [cari, setCari] = useState("");
-  const ubahPencarian = (e) => {
-    setCari(e.target.value);
-    props.ubahPencarian(e.target.value);
+
+  const ubahPencarian = () => {
+    props.ubahPencarian(cari);
   };
+
+  const cariKeyDown = (e) => {
+    if (e.key === "Enter") {
+      ubahPencarian();
+    }
+  };
+
   return (
     <>
       <div>
         Cari Artikel :
-        <input onChange={ubahPencarian} />
+        <input
+          onChange={(e) => setCari(e.target.value)}
+          onKeyDown={cariKeyDown}
+        />
+        <button onClick={ubahPencarian}>Cari Gan</button>
       </div>
       <small>
         Hasil pencarian adalah {props.totalPosts} dari pencarian {cari}
